@@ -94,6 +94,92 @@ print(x)   # output: [1 2 3], change NOT reflected
 ```
 
 ---
+# NumPy Practice Solutions (Q11–Q20)
 
-✅ These are the **first 10 solved questions** from the NumPy expert series.  
-More questions will be added as I progress 🚀
+## 11. Extract the first 5 elements of a NumPy array
+```python
+import numpy as np
+x = np.array([10,20,4,5,6,7,8,7])
+print(x[:5])   # [10 20  4  5  6]
+```
+
+## 12. Reverse a NumPy array without slicing
+```python
+import numpy as np
+x = np.array([10,20,4,5,6,7,8,7])
+print(np.flip(x))   # reversed array
+```
+
+## 13. Extract all even numbers from a NumPy array
+```python
+import numpy as np
+x = np.array([10,20,4,5,6,7,8,7])
+print(x[x%2==0])   # [10 20  4  6  8]
+```
+
+## 14. Get the last row of a 2D array
+```python
+import numpy as np
+x = np.array([[10,20,30],
+              [5,6,7],
+              [0,9,8]])
+print(x[-1])   # [0 9 8]
+```
+
+## 15. Slice a 2D array to get a submatrix of shape (2,2)
+```python
+import numpy as np
+x = np.array([[10,20,30],
+              [5,6,7],
+              [0,9,8]])
+submatrix = x[:2, :2]
+print(submatrix)
+print(submatrix.shape)  # (2,2)
+```
+
+## 16. Replace all odd numbers in an array with -1
+```python
+import numpy as np
+x = np.array([[10,20,30],
+              [5,6,7],
+              [0,9,8]])
+x[x%2!=0] = -1
+print(x)
+```
+
+## 17. Flatten a 2D array into 1D
+```python
+import numpy as np
+x = np.array([[10,20,30],
+              [5,6,7],
+              [0,9,8]])
+print(x.flatten())   # [10 20 30  5  6  7  0  9  8]
+```
+
+## 18. Extract every alternate element of an array
+```python
+import numpy as np
+x = np.array([[10,20,30],
+              [5,6,7],
+              [0,9,8]])
+print(x.flatten()[::2])   # alternate elements
+```
+
+## 19. Slice a 3D array along axis 1
+```python
+import numpy as np
+x = np.array([[[10,20,30],
+              [5,6,7],
+              [0,9,8]]])
+print(x[:, :2, :])   # taking first 2 rows along axis 1
+```
+
+## 20. Replace all values greater than 50 in an array with 50
+```python
+import numpy as np
+x = np.array([[55,20,30],
+              [53,6,7],
+              [0,9,56]])
+x[x>50] = 50
+print(x)
+```
