@@ -5,6 +5,12 @@ This file contains a quick walkthrough of **NumPy basics to intermediate concept
 ---
 
 ## 📌 1. Installation & Config
+
+```python
+pip3 install numpy
+```
+Write above command in terminal and download it
+
 ```python
 import numpy as np
 
@@ -529,3 +535,20 @@ print(var1.shape)       # Output: (3, 3)
 print(np.linalg.det(var1))  # Output: 0.0 (since it's singular matrix)
 ```
 ---
+
+## 📌 30. To solve eqn.
+
+Let two eqn. be AX = B
+2x + y = 9
+x + y = 3
+
+```python
+import numpy as np
+
+# Make matrix A and B
+a = np.array([[2 1] , [1 1]])
+b = np.array([ 9 3 ])
+x = np.linalg.solve(a , b)
+print(x)
+---
+
