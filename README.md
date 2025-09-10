@@ -1,4 +1,4 @@
-# NumPy Cheat Sheet with Examples (with Output + Explanations)
+# NumPy Basics
 
 This file contains a quick walkthrough of **NumPy basics to intermediate concepts** with short explanations, comments, and outputs.
 
