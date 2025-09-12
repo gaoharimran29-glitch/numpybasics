@@ -1,10 +1,8 @@
 # NumPy Basics
 
-This file contains a quick walkthrough of **NumPy basics to intermediate concepts** with short explanations, comments, and outputs.
-
 ---
 
-## 📌 1. Installation & Config
+## 1. Installation & Config
 
 ```python
 pip3 install numpy
@@ -26,7 +24,7 @@ np.show_config()
 
 ---
 
-## 📌 2. Creating Arrays
+## 2. Creating Arrays
 ```python
 # 0D, 1D, 2D, 3D arrays
 a = np.array(42)                        
@@ -68,7 +66,7 @@ print(np.eye(3))              # identity matrix
 
 ---
 
-## 📌 3. Data Types
+## 3. Data Types
 ```python
 arr = np.array([1,2,3,4])
 print(arr.dtype)              # int64 (default)
@@ -91,7 +89,7 @@ int8
 
 ---
 
-## 📌 4. Arithmetic Operations
+## 4. Arithmetic Operations
 ```python
 arr = np.array([1,2,3,4])
 print(arr + 3)         # add scalar
@@ -112,7 +110,7 @@ print(np.subtract(a,b))# element-wise subtraction
 
 ---
 
-## 📌 5. Random Numbers
+## 5. Random Numbers
 ```python
 print(np.random.rand(4))      # #will generate 4 random numbers between 0 to 1
 print(np.random.randn(4))     # give random numbers which close to zero (both positive and negative)
@@ -129,7 +127,7 @@ print(np.random.randint(3,10,4))  # #will generate 4 random numbers between [3,1
 
 ---
 
-## 📌 6. Useful Math Functions
+## 6. Useful Math Functions
 ```python
 arr = np.array([8,3,9,10])
 print(np.min(arr), np.max(arr))   # min & max
@@ -147,7 +145,7 @@ print(np.cumsum(arr))             # cumulative sum
 
 ---
 
-## 📌 7. Shape and Reshape
+## 7. Shape and Reshape
 ```python
 arr = np.array([[1,2,3],[4,5,6]])
 print(arr.shape)           # shape
@@ -163,7 +161,7 @@ print(arr.reshape(3,2))    # reshape
 
 ---
 
-## 📌 8. Indexing & Slicing
+## 8. Indexing & Slicing
 ```python
 arr = np.array([[1,2,3,4,5],[6,7,8,9,10]])
 print(arr[0,1])         # element
@@ -182,7 +180,7 @@ print(arr[0:2,1:4])     # sub-matrix
 
 ---
 
-## 📌 9. Copy vs View
+## 9. Copy vs View
 Copy owns the data and view doesnot own the data. If we change original array or copy it does not affect each other but change in view or original array reflect in both. View is just a shallow copy which points to same memory of original array.
 ```python
 arr = np.array([1,2,3])
@@ -200,7 +198,7 @@ print(view_arr)         # reflects change
 
 ---
 
-## 📌 10. Advanced Indexing
+## 10. Advanced Indexing
 ```python
 arr = np.array([10,20,30,40,50])
 print(arr[[0,2,4]])            # fancy indexing
@@ -220,7 +218,7 @@ print(arr[arr > 25])            # boolean mask
 
 ---
 
-## 📌 11. Ravel & Flatten
+## 11. Ravel & Flatten
 ```python
 x = np.array([[1,2,3],[4,5,6]])
 print(x.ravel())       # returns view
@@ -234,7 +232,7 @@ print(x.flatten())     # returns copy
 
 ---
 
-## 📌 12. Insert, Delete, Concatenate
+## 12. Insert, Delete, Concatenate
 ```python
 arr = np.array([10,20,30])
 print(np.insert(arr,1,99))   # insert element
@@ -250,7 +248,7 @@ print(np.concatenate(([1,2,3],[4,5,6])))  # merge arrays
 
 ---
 
-## 📌 13. Stacking & Splitting
+## 13. Stacking & Splitting
 ```python
 a = np.array([1,2,3])
 b = np.array([4,5,6])
@@ -277,7 +275,7 @@ print(np.hsplit(mat,2))      # split columns
 
 ---
 
-## 📌 14. Handling NaN & Infinity
+## 14. Handling NaN & Infinity
 ```python
 arr = np.array([1,2,np.nan,9])
 print(np.isnan(arr))                   # detect NaN
@@ -297,7 +295,7 @@ print(np.nan_to_num(arr,posinf=40,neginf=-40))  # replace inf
 
 ---
 
-## 📌 15. Transpose & Dimensions
+## 15. Transpose & Dimensions
 ```python
 mat = np.array([[1,2,3],[4,5,6]])
 print(mat.T)                  # transpose
@@ -536,7 +534,7 @@ print(np.linalg.det(var1))  # Output: 0.0 (since it's singular matrix)
 ```
 ---
 
-## 📌 30. To solve eqn.
+## 30. To solve eqn.
 
 Let two eqn. be AX = B
 2x + y = 9
